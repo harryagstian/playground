@@ -1,0 +1,20 @@
+version: "3.8"
+
+x-default-volumes:
+  &default-volumes
+  volumes:
+    - /root/.vscode_server:/root/.vscode_server
+    - /playground/source:/playground/source
+
+services:
+  nodejs:
+    build:
+      context: ./nodejs
+    tty: true
+    << : *default-volumes
+
+  python3:
+    build:
+      context: ./python3
+    tty: true
+    << : *default-volumes
