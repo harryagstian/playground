@@ -3,7 +3,7 @@ version: "3.8"
 x-default-volumes:
   &default-volumes
   volumes:
-    - /root/.vscode_server:/root/.vscode_server
+    - /root/.vscode-server:/root/.vscode-server
     - /playground/source:/playground/source
 
 services:
